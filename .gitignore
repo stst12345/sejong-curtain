@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cloudflare Pages
+*.pages.dev
+.wrangler/
+wrangler.toml.backup
