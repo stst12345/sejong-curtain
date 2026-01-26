@@ -492,11 +492,52 @@ html {
   }
 
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: calc(100vh - 80px);
+    background-color: rgba(253, 251, 247, 0.98);
+    backdrop-filter: blur(12px);
+    padding: 40px 20px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    margin: 0 0 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: var(--secondary-color);
+    transform: translateX(5px);
   }
 
   .hamburger {
     display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
 
   .contact-content {

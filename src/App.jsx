@@ -18,22 +18,27 @@ function App() {
   return (
     <div className="app">
       {/* Navigation */}
-      <nav className="navbar">
+      <nav className="navbar" role="navigation" aria-label="메인 네비게이션">
         <div className="container navbar-container">
           <div className="logo">
             <h1>세종커튼</h1>
           </div>
-          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <a href="#home" onClick={() => setIsMenuOpen(false)}>홈</a>
-            <a href="#about" onClick={() => setIsMenuOpen(false)}>소개</a>
-            <a href="#products" onClick={() => setIsMenuOpen(false)}>제품</a>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>문의하기</a>
+          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} role="menu">
+            <a href="#home" onClick={() => setIsMenuOpen(false)} role="menuitem">홈</a>
+            <a href="#about" onClick={() => setIsMenuOpen(false)} role="menuitem">소개</a>
+            <a href="#products" onClick={() => setIsMenuOpen(false)} role="menuitem">제품</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)} role="menuitem">문의하기</a>
           </div>
-          <div className="hamburger" onClick={toggleMenu}>
+          <button
+            className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+            onClick={toggleMenu}
+            aria-label="메뉴 열기/닫기"
+            aria-expanded={isMenuOpen}
+          >
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </button>
         </div>
       </nav>
 
@@ -87,7 +92,7 @@ function App() {
           <div className="product-grid">
             <div className="product-card">
               <div className="product-image">
-                <img src={productImage1} alt="프리미엄 커튼" />
+                <img src={productImage1} alt="프리미엄 커튼 시공 사례 - 호텔 같은 아늑한 침실" />
               </div>
               <div className="product-info">
                 <h3>프리미엄 커튼</h3>
@@ -96,7 +101,7 @@ function App() {
             </div>
             <div className="product-card">
               <div className="product-image">
-                <img src={productImage2} alt="맞춤 블라인드" />
+                <img src={productImage2} alt="맞춤 블라인드 시공 사례 - 세련된 빛 조절" />
               </div>
               <div className="product-info">
                 <h3>맞춤 블라인드</h3>
@@ -105,7 +110,7 @@ function App() {
             </div>
             <div className="product-card">
               <div className="product-image">
-                <img src={productImage3} alt="스마트 전동" />
+                <img src={productImage3} alt="스마트 전동 커튼 시스템 - 리모컨으로 제어" />
               </div>
               <div className="product-info">
                 <h3>스마트 전동 시스템</h3>
