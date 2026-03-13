@@ -162,17 +162,17 @@ html {
 }
 
 .btn-primary {
-  background-color: var(--accent-color);
+  background-color: var(--primary-dark);
   color: var(--white);
-  border: 2px solid var(--accent-color);
-  box-shadow: 0 8px 20px rgba(255, 112, 67, 0.3);
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 8px 20px rgba(93, 64, 55, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: #F4511E;
-  border-color: #F4511E;
+  background-color: var(--text-color);
+  border-color: var(--text-color);
   transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(255, 112, 67, 0.4);
+  box-shadow: 0 12px 25px rgba(93, 64, 55, 0.4);
 }
 
 .btn-outline {
