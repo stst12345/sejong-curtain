@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Google, Naver, Daum, Bing 및 AI 검색 크롤러 지원
+User-agent: Yeti
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://sejong-curtain.1yeol.com/sitemap.xml
